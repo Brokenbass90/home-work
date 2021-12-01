@@ -41,7 +41,10 @@ module.exports = {
                     'less-loader',
             ],
             }
-        ]
+        ] 
+    },
+    performance: {
+        hints: false
     },
     plugins: [
         new HTMLWebpackPlugin({ template: path.resolve(__dirname, 'index.html') })
