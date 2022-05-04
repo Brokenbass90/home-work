@@ -1,0 +1,111 @@
+.controls {
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.carmaCounter > * + * {
+  padding: 0 0 0 4px;
+}
+
+.karmaValue {
+  color: var(--greyC4);
+}
+
+.commentsButton {
+  display: flex;
+  align-items: normal;
+}
+
+.commentsButton * {
+  color: var(--greyC4);
+}
+
+.commentsNumber {
+  font-weight: 500;
+  padding-left: 6px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.shareButton {
+  margin-right: 15px;
+}
+.shareButton, .saveButton {
+  width: 20px;
+  height: 20px;
+}
+
+@media all and (min-width: 1024px) {
+    
+  .username {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .username:hover{
+    text-decoration: underline;
+  }
+
+  .metaData {
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .commentsButton{
+    display: none;
+  }
+
+  .karmaCounter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+  }
+
+  .karmaCounter > * + * {
+    padding: 7px 0 0;
+  }
+  
+  .up {
+    padding: 0 0 0 4px;
+  }
+  .up svg path:hover{
+    fill: #A4CC33;
+  }
+  .down svg path:hover{
+    fill: #CC3361;
+  }
+  .karmaValue {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--black);
+  }
+  .controls {
+    order: 3;
+    flex: 0 0;
+    margin: 0 0 0 24px;
+  }
+
+  .actions {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1540px) {
+  .username{
+    position: relative;
+    z-index: 1;
+  }
+  .karmaCounter > button.up:hover > svg > path {
+    fill: var(--green);
+  }
+
+  .karmaCounter > button.down:hover > svg > path {
+    fill: var(--orange);
+  }
+}
