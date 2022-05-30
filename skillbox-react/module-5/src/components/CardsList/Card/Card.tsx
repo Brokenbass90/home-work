@@ -15,7 +15,7 @@ export function Card() {
       <TextContent />
       <Menu>
         <Dropdown button={<ButtonMenu />}>
-          <DropMenu />          
+          <DropMenu />      
         </Dropdown>
       </Menu>
       <Preview />
