@@ -6,6 +6,7 @@ interface IItem {
   text: string;
   img?: React.ReactNode;
   className?: string;
+  classNameCintent?: string;
   As?: 'a' | 'li' | 'button' | 'div';
   href?: string;
 }
@@ -18,10 +19,10 @@ export function ListItem({ list }: IGenericListProps) {
     <>
         {list.map(({ As = "li", text, className, id, href, img }) => (
             <As
-                className={styles.itemBox}
+                className={className}
                 key={id}   
                 href={href}
-            >
+            > 
               <div className={styles.imgBox}>{img}</div>
               <div className={styles.textBox}>{text}</div>
             </As>

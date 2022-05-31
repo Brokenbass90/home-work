@@ -5,11 +5,11 @@ import { generateId } from '../../../../utils/react/generateRandomIndex';
 import { commentImg, shareImg, hideImg, saveImg, complaintImg } from '../../../../images/listImages/listImg'
 
 const LIST = [
-  {As: 'li' as const, img: commentImg, text: 'Комментарии'}, 
-  {As: 'li' as const, img: shareImg, text: "Поделиться"}, 
-  {As: 'li' as const, img: hideImg, text: 'Скрыть'},
-  {As: 'li' as const, img: saveImg, text: 'Сохранить'},
-  {As: 'li' as const, img: complaintImg, text: 'Пожаловаться'},
+  {As: 'li' as const, img: commentImg, text: 'Комментарии', className: styles.itemBox}, 
+  {As: 'li' as const, img: shareImg, text: "Поделиться", className: styles.itemBox}, 
+  {As: 'li' as const, img: hideImg, text: 'Скрыть', className: styles.itemBox},
+  {As: 'li' as const, img: saveImg, text: 'Сохранить', className: styles.itemBox},
+  {As: 'li' as const, img: complaintImg, text: 'Пожаловаться', className: styles.itemBox},
 ].map(generateId);
 
 export function DropMenu() {

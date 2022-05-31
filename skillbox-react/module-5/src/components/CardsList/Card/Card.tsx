@@ -8,14 +8,13 @@ import { Dropdown } from '../..//Dropdown/Dropdown';
 import { ButtonMenu } from './ButtonMenu';
 import { DropMenu } from './DropMenu/DropMenu';
 
-
 export function Card() {
   return (
     <li className={styles.card}>
       <TextContent />
       <Menu>
         <Dropdown button={<ButtonMenu />}>
-          <DropMenu />      
+          <DropMenu /> 
         </Dropdown>
       </Menu>
       <Preview />
