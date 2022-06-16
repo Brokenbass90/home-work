@@ -6,24 +6,26 @@ interface IItem {
   text: string;
   img?: React.ReactNode;
   className?: string;
-  classNameCintent?: string;
   As?: 'a' | 'li' | 'button' | 'div';
   href?: string;
+  
 }
 
 interface IGenericListProps {
   list: IItem[];
+  postID: string;
 }
-export function ListItem({ list }: IGenericListProps) {
+const NOOP = () => {};
+export function ListItem({ list, postID }: IGenericListProps) {
   return(
     <>
-        {list.map(({ As = "li", text, className, id, href, img }) => (
+        {list.map(({ As = "li", text, className, id, href, img}) => (
             <As
                 className={className}
                 key={id}   
                 href={href}
-            > 
-              <div className={styles.imgBox}>{img}</div>
+            >
+              <div className={styles.imgBox} onClick={() => console.log(postID)}>{img}</div>
               <div className={styles.textBox}>{text}</div>
             </As>
         ))}

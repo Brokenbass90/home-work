@@ -9,7 +9,7 @@ import { generateRandomString, assiegnId, generateId } from "./utils/react/gener
 import { merge } from "../src/utils/js/merge";
 import { GenericList } from "./components/draft/Draft";
 
-// Константу модно называть с большой буквы
+// Константу можно называть с большой буквы
 
 // const LIST = [
 //     {value: 'some'}, 

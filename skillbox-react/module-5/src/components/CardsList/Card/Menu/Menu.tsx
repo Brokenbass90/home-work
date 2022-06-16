@@ -1,14 +1,21 @@
 import React, { ReactNode } from 'react';
 import styles from './menu.less';
+import { Dropdown } from '../../..//Dropdown/Dropdown';
+import { DropMenu } from '../DropMenu/DropMenu';
+import { MenuIcon } from '../../../../images/MenuIcon'
 
-interface IMenuProps{
-  children: ReactNode;
-}
-
-export function Menu({ children}: IMenuProps) {
+export function Menu() {
   return (
     <div className={styles.menu}>
-      {children}
+      <Dropdown 
+        button={
+          <button className={styles.menuButton}>
+            <MenuIcon />
+          </button>
+        }>
+        <DropMenu /> 
+      </Dropdown>
     </div>
   );
 }
+
